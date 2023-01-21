@@ -9,9 +9,9 @@ export const ContactList = () => {
 
   return (
     <List>
-      {contactList.map(({ id, name, number }) => (
+      {contactList.map(({ id, name, phone }) => (
         <li key={id}>
-          {name}: {number}
+          {name}: {phone}
           <button onClick={() => dispatch(deleteContact(id))}>Delete</button>
         </li>
       ))}
