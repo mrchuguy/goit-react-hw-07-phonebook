@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { filterContacts } from 'redux/filterSlice';
-import { getFilterContact } from 'redux/selectors';
+import { selectFilter } from 'redux/selectors';
 import { Input, Title } from './Filter.styled';
 
 export const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(getFilterContact);
+  const filter = useSelector(selectFilter);
 
   function handleUpdate(evt) {
     const query = evt.target.value;
